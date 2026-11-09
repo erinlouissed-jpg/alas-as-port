@@ -1,0 +1,288 @@
+
+* { box-sizing: border-box; }
+
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #071a36;
+                background-image:
+                    radial-gradient(circle at 12% 18%, rgba(37, 139, 255, .24), transparent 27%),
+                    radial-gradient(circle at 88% 72%, rgba(0, 209, 255, .16), transparent 30%),
+                    radial-gradient(circle, rgba(125, 190, 255, .24) 1.2px, transparent 1.8px),
+                    linear-gradient(rgba(105, 170, 255, .055) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(105, 170, 255, .055) 1px, transparent 1px),
+                    linear-gradient(135deg, #071a36, #0b2850 55%, #06152d);
+                background-size: auto, auto, 48px 48px, 48px 48px, 48px 48px, auto;
+                background-attachment: fixed;
+            }
+
+            .site-header {
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                background: rgba(7, 26, 54, .96);
+                box-shadow: 0 4px 18px rgba(0, 0, 0, .12);
+            }
+
+            main {
+                width: min(calc(100% - 40px), 1120px);
+                margin: 0 auto;
+            }
+
+            main section {
+                min-height: 70vh;
+                margin: 28px 0;
+                padding: 72px clamp(22px, 5vw, 64px);
+                border: 1px solid rgba(147, 197, 253, .35);
+                border-radius: 24px;
+                background: rgba(248, 251, 255, .96);
+                box-shadow: 0 18px 55px rgba(0, 8, 25, .22);
+                scroll-margin-top: 24px;
+            }
+
+            main section > h2 {
+                margin-top: 0.08in;
+                text-align: center;
+            }
+
+            main h1,
+            main h2 {
+                margin: 0 0 12px;
+                color: #10243f;
+            }
+
+            main h1 {
+                font-size: clamp(2.5rem, 7vw, 5rem);
+            }
+
+            main h2 {
+                font-size: clamp(2rem, 5vw, 3.5rem);
+            }
+
+            main p {
+                color: #59665f;
+                line-height: 1.7;
+            }
+
+            .home-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: clamp(20px, 4vw, 36px);
+                min-height: 48vh;
+                padding: clamp(20px, 3.5vh, 52px) clamp(20px, 5vw, 64px);
+                border-color: rgba(120, 199, 255, .42);
+                background: linear-gradient(135deg, rgba(7, 26, 54, .94), rgba(11, 40, 80, .92));
+            }
+
+            .home-logo {
+                display: grid;
+                width: clamp(96px, 12vw, 150px);
+                aspect-ratio: 1;
+                flex: 0 0 auto;
+                place-content: center;
+                border: 1px solid #67b7ff;
+                border-radius: 50%;
+                background: linear-gradient(145deg, #c8ecff, #3998ee);
+                box-shadow: 12px 14px 0 rgba(70, 153, 239, .18), 0 0 35px rgba(49, 153, 255, .2);
+                color: #082343;
+                font-size: clamp(1.8rem, 3vw, 3rem);
+                font-weight: 800;
+                letter-spacing: -.1em;
+                line-height: 1;
+                padding-right: .08em;
+            }
+
+            .home-copy {
+                display: flex;
+                flex: 1 1 auto;
+                flex-direction: column;
+                justify-content: center;
+                min-width: 0;
+                max-width: 760px;
+            }
+
+            .home-copy h1 {
+                margin: 0;
+                color: #f4f8ff;
+                font-size: clamp(2rem, 5vw, 5rem);
+                letter-spacing: -.06em;
+                line-height: .96;
+                white-space: normal;
+                word-break: break-word;
+            }
+
+            .home-copy p {
+                margin: 8px 0 0;
+                color: #b9dcf7;
+                font-size: clamp(1rem, 1.7vw, 1.45rem);
+            }
+
+            .about-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr .8fr;
+                align-items: center;
+                column-gap: clamp(28px, 5vw, 72px);
+            }
+
+            .about-section > h2 {
+                grid-column: 1 / -1;
+                margin-bottom: 38px;
+                text-align: center;
+            }
+
+            .about-copy p {
+                margin: 0;
+            }
+
+            .education {
+                padding: 22px 24px;
+                border-left: 3px solid #258bdf;
+                background: #eaf4ff;
+            }
+
+            .education h3 {
+                margin: 0 0 12px;
+                color: #10243f;
+                font-size: 1.1rem;
+            }
+
+            .education p {
+                margin: 0;
+            }
+
+            .profile-portrait {
+                display: block;
+                width: -200px;
+                margin-top: -80px;
+                height: -30px
+                margin-bottom: 25px
+                
+            }
+
+
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(120px, 1fr));
+                gap: 20px;
+                max-width: 760px;
+                margin: 24px auto 0;
+            }
+
+            .skill-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 110px;
+                padding: 16px 12px;
+                border: 1px solid rgba(37, 139, 223, .35);
+                border-radius: 18px;
+                background: linear-gradient(135deg, #edf7ff, #dfeeff);
+                color: #10243f;
+                font-size: 1rem;
+                font-weight: 700;
+                text-align: center;
+                box-shadow: 0 12px 24px rgba(17, 56, 107, .08);
+            }
+
+            .navigation {
+                display: flex;
+                width: min(calc(100% - 40px), 1120px);
+                min-height: 76px;
+                align-items: center;
+                justify-content: space-between;
+                gap: 24px;
+                margin: 0 auto;
+            }
+
+            .brand {
+                color: #78c7ff;
+                font-size: 1.05rem;
+                font-weight: 800;
+                letter-spacing: .08em;
+                text-decoration: none;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: clamp(14px, 3vw, 34px);
+            }
+
+            .nav-links a {
+                padding: 10px 0;
+                color: #f4f5ef;
+                font-size: .92rem;
+                text-decoration: none;
+                transition: color .2s ease;
+            }
+
+            .nav-links a:hover,
+            .nav-links a:focus-visible {
+                color: #78c7ff;
+            }
+
+            @media (max-width: 900px) {
+                .skills-grid {
+                    grid-template-columns: repeat(3, minmax(110px, 1fr));
+                }
+            }
+
+            @media (max-width: 620px) {}
+                main {
+                    width: calc(100% - 32px);
+                }
+
+                .navigation {
+                    width: calc(100% - 28px);
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 4px;
+                    padding: 14px 0 10px;
+                }
+
+                .nav-links {
+                    width: 100%;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 4px 18px;
+                }
+
+                .nav-links a {
+                    padding: 7px 0;
+                    font-size: .85rem;
+                }
+
+                .about-section {
+                    grid-template-columns: 1fr;
+                    row-gap: 24px;
+                }
+
+                .home-section {
+                    min-height: 120px;
+                    gap: 8px;
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                }
+
+                .home-logo {
+                    width: clamp(52px, 16vw, 74px);
+                    border-radius: 50%;
+                }
+
+                .home-copy h1 {
+                    font-size: clamp(.8rem, 3.4vw, 1.15rem);
+                    white-space: normal;
+                }
+
+                .about-section > h2 {
+                    margin-bottom: 4px;
+                }
+
+                .profile-portrait {
+                    width: min(72%, 250px);
+                    justify-self: center;
+                }
